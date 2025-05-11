@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Leaderboard{% endblock %}
+
+{% block content %}
+<div class="leaderboard-background">
+    <div class="animated-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+    <div class="leaderboard-container">
+        <header class="leaderboard-header">
+            <h1>Top Quiz Masters</h1>
+            <p class="subtitle">The brainiest of the bunch!</p>
+        </header>
+
+        <section class="filters">
+            <select name="category" id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="general">General Knowledge</option>
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+            </select>
+            <select name="date" id="date-filter">
+                <option value="today">Today</option>
+                <option value="week">This Week</option>
+                <option value="alltime" selected>All Time</option>
+            </select>
+            <select name="sort" id="sort-filter">
+                <option value="score" selected>Highest Score</option>
+                <option value="time">Fastest Time</option>
+                <option value="quizzes">Most Quizzes Taken</option>
+            </select>
+        </section>
+
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="top1">
+                    <td>🥇 1</td>
+                    <td>Alex</td>
+                    <td>95</td>
+                    <td>1m 20s</td>
+                </tr>
+                <tr class="top2">
+                    <td>🥈 2</td>
+                    <td>Jordan</td>
+                    <td>90</td>
+                    <td>2m 05s</td>
+                </tr>
+                <tr class="top3">
+                    <td>🥉 3</td>
+                    <td>Priya</td>
+                    <td>89</td>
+                    <td>1m 55s</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Sam</td>
+                    <td>85</td>
+                    <td>2m 30s</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Lee</td>
+                    <td>80</td>
+                    <td>3m 10s</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section class="call-to-action">
+            <p>Think you can beat them? Take a quiz now!</p>
+            <a href="{{ url_for('quiz') }}" class="start-quiz-btn">Start Quiz</a>
+        </section>
+    </div>
+</div>
+{% endblock %}

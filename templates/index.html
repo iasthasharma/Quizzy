@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <h1>Explore. Learn. Compete.</h1>
+    <p>Join Quizzy to challenge your knowledge and improve your skills with fun quizzes.</p>
+<div class="hero-buttons">
+        <!-- Removed AI quiz topic form as start_quiz route does not exist -->
+        <a href="{{ url_for('quiz') }}" class="btn btn-primary">Start Quiz</a>
+        <a href="#" class="btn btn-secondary">Learn More</a>
+    </div>
+    <div class="animated-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+        <div class="blob blob4"></div>
+        <div class="blob blob5"></div>
+    </div>
+</div>
+
+<!-- Wavy SVG divider -->
+<div class="wavy-divider">
+    <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path fill="#f8f9fa" d="M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,112C672,107,768,117,864,128C960,139,1056,149,1152,138.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+</div>
+
+<div class="benefits-panel">
+    <h3>Why Take Quizzes?</h3>
+    <p>Quizzes help improve memory, reinforce learning, and make studying fun and interactive.</p>
+</div>
+
+<section class="features-section">
+    <h3>Features</h3>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h4>Instant Feedback</h4>
+            <p>Get immediate results after each question to track your progress.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Progress Tracking</h4>
+            <p>Monitor your improvement over time with detailed statistics.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Leaderboard</h4>
+            <p>Compete with others and see how you rank among top players.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Categories Variety</h4>
+            <p>Choose from a wide range of quiz categories to suit your interests.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Wavy SVG divider flipped -->
+<div class="wavy-divider flipped">
+    <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path fill="#ffffff" d="M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,112C672,107,768,117,864,128C960,139,1056,149,1152,138.7C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+</div>
+
+<!-- Decorative pastel circles -->
+<div class="decorative-circles">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+</div>
+{% endblock %}
